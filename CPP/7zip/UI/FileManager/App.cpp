@@ -194,6 +194,7 @@ static const CButtonInfo g_ArchiveButtons[] =
 {
   { kMenuCmdID_Toolbar_Add,     IDB_ADD,     IDB_ADD2,     IDS_ADD },
   { kMenuCmdID_Toolbar_Extract, IDB_EXTRACT, IDB_EXTRACT2, IDS_EXTRACT },
+  { kMenuCmdID_Toolbar_AutoExtract, IDB_EXTRACT, IDB_EXTRACT2, IDS_AUTOEXTRACT },
   { kMenuCmdID_Toolbar_Test,    IDB_TEST,    IDB_TEST2,    IDS_TEST }
 };
 

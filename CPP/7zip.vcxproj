@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{48568a4c-387b-4030-ae7f-ccf9dd58bfb1}</ProjectGuid>
+    <RootNamespace>My7zipx</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Manifest Include="7zip\UI\FileManager\7zFM.exe.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="7zip\UI\FileManager\7zipLogo.ico" />
+    <Image Include="7zip\UI\FileManager\Add.bmp" />
+    <Image Include="7zip\UI\FileManager\Add2.bmp" />
+    <Image Include="7zip\UI\FileManager\Copy.bmp" />
+    <Image Include="7zip\UI\FileManager\Copy2.bmp" />
+    <Image Include="7zip\UI\FileManager\Delete.bmp" />
+    <Image Include="7zip\UI\FileManager\Delete2.bmp" />
+    <Image Include="7zip\UI\FileManager\Extract.bmp" />
+    <Image Include="7zip\UI\FileManager\Extract2.bmp" />
+    <Image Include="7zip\UI\FileManager\FM.ico" />
+    <Image Include="7zip\UI\FileManager\Info.bmp" />
+    <Image Include="7zip\UI\FileManager\Info2.bmp" />
+    <Image Include="7zip\UI\FileManager\Move.bmp" />
+    <Image Include="7zip\UI\FileManager\Move2.bmp" />
+    <Image Include="7zip\UI\FileManager\Test.bmp" />
+    <Image Include="7zip\UI\FileManager\Test2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="7zip\UI\FileManager\AboutDialog.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\AltStreamsFolder.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\App.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\BrowseDialog.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\BrowseDialog2.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\ClassDefs.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\ComboDialog.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\CopyDialog.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\EditDialog.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\EditPage.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\EnumFormatEtc.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\ExtractCallback.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\FileFolderPluginOpen.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\FilePlugins.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\FM.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\FoldersPage.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\FormatUtils.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\FSDrives.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\FSFolder.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\FSFolderCopy.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\HelpUtils.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\LangPage.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\LangUtils.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\LinkDialog.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\ListViewDialog.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\MemDialog.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\MenuPage.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\MessagesDialog.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\MyLoadMenu.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\NetFolder.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\OpenCallback.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\OptionsDialog.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\OverwriteDialog.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\Panel.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\PanelCopy.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\PanelCrc.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\PanelDrag.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\PanelFolderChange.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\PanelItemOpen.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\PanelItems.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\PanelKey.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\PanelListNotify.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\PanelMenu.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\PanelOperations.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\PanelSelect.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\PanelSort.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\PanelSplitFile.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\PasswordDialog.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\ProgramLocation.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\ProgressDialog.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\ProgressDialog2.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\PropertyName.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\RegistryAssociations.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\RegistryPlugins.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\RegistryUtils.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\RootFolder.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\SettingsPage.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\SplitDialog.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\SplitUtils.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\StdAfx.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\StringUtils.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\SysIconUtils.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\SystemPage.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\TextPairs.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\UpdateCallback100.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\VerCtrl.cpp" />
+    <ClCompile Include="7zip\UI\FileManager\ViewSettings.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="7zip\UI\FileManager\AboutDialog.h" />
+    <ClInclude Include="7zip\UI\FileManager\AboutDialogRes.h" />
+    <ClInclude Include="7zip\UI\FileManager\AltStreamsFolder.h" />
+    <ClInclude Include="7zip\UI\FileManager\App.h" />
+    <ClInclude Include="7zip\UI\FileManager\AppState.h" />
+    <ClInclude Include="7zip\UI\FileManager\BrowseDialog.h" />
+    <ClInclude Include="7zip\UI\FileManager\BrowseDialog2.h" />
+    <ClInclude Include="7zip\UI\FileManager\BrowseDialog2Res.h" />
+    <ClInclude Include="7zip\UI\FileManager\BrowseDialogRes.h" />
+    <ClInclude Include="7zip\UI\FileManager\ComboDialog.h" />
+    <ClInclude Include="7zip\UI\FileManager\ComboDialogRes.h" />
+    <ClInclude Include="7zip\UI\FileManager\CopyDialog.h" />
+    <ClInclude Include="7zip\UI\FileManager\CopyDialogRes.h" />
+    <ClInclude Include="7zip\UI\FileManager\DialogSize.h" />
+    <ClInclude Include="7zip\UI\FileManager\EditDialog.h" />
+    <ClInclude Include="7zip\UI\FileManager\EditDialogRes.h" />
+    <ClInclude Include="7zip\UI\FileManager\EditPage.h" />
+    <ClInclude Include="7zip\UI\FileManager\EditPageRes.h" />
+    <ClInclude Include="7zip\UI\FileManager\EnumFormatEtc.h" />
+    <ClInclude Include="7zip\UI\FileManager\ExtractCallback.h" />
+    <ClInclude Include="7zip\UI\FileManager\FileFolderPluginOpen.h" />
+    <ClInclude Include="7zip\UI\FileManager\FilePlugins.h" />
+    <ClInclude Include="7zip\UI\FileManager\FoldersPage.h" />
+    <ClInclude Include="7zip\UI\FileManager\FoldersPageRes.h" />
+    <ClInclude Include="7zip\UI\FileManager\FormatUtils.h" />
+    <ClInclude Include="7zip\UI\FileManager\FSDrives.h" />
+    <ClInclude Include="7zip\UI\FileManager\FSFolder.h" />
+    <ClInclude Include="7zip\UI\FileManager\HelpUtils.h" />
+    <ClInclude Include="7zip\UI\FileManager\IFolder.h" />
+    <ClInclude Include="7zip\UI\FileManager\LangPage.h" />
+    <ClInclude Include="7zip\UI\FileManager\LangPageRes.h" />
+    <ClInclude Include="7zip\UI\FileManager\LangUtils.h" />
+    <ClInclude Include="7zip\UI\FileManager\LinkDialog.h" />
+    <ClInclude Include="7zip\UI\FileManager\LinkDialogRes.h" />
+    <ClInclude Include="7zip\UI\FileManager\ListViewDialog.h" />
+    <ClInclude Include="7zip\UI\FileManager\ListViewDialogRes.h" />
+    <ClInclude Include="7zip\UI\FileManager\MemDialog.h" />
+    <ClInclude Include="7zip\UI\FileManager\MemDialogRes.h" />
+    <ClInclude Include="7zip\UI\FileManager\MenuPage.h" />
+    <ClInclude Include="7zip\UI\FileManager\MenuPageRes.h" />
+    <ClInclude Include="7zip\UI\FileManager\MessagesDialog.h" />
+    <ClInclude Include="7zip\UI\FileManager\MessagesDialogRes.h" />
+    <ClInclude Include="7zip\UI\FileManager\MyCom2.h" />
+    <ClInclude Include="7zip\UI\FileManager\MyLoadMenu.h" />
+    <ClInclude Include="7zip\UI\FileManager\MyWindowsNew.h" />
+    <ClInclude Include="7zip\UI\FileManager\NetFolder.h" />
+    <ClInclude Include="7zip\UI\FileManager\OpenCallback.h" />
+    <ClInclude Include="7zip\UI\FileManager\OverwriteDialog.h" />
+    <ClInclude Include="7zip\UI\FileManager\OverwriteDialogRes.h" />
+    <ClInclude Include="7zip\UI\FileManager\Panel.h" />
+    <ClInclude Include="7zip\UI\FileManager\PasswordDialog.h" />
+    <ClInclude Include="7zip\UI\FileManager\PasswordDialogRes.h" />
+    <ClInclude Include="7zip\UI\FileManager\PluginInterface.h" />
+    <ClInclude Include="7zip\UI\FileManager\PluginLoader.h" />
+    <ClInclude Include="7zip\UI\FileManager\ProgramLocation.h" />
+    <ClInclude Include="7zip\UI\FileManager\ProgressDialog.h" />
+    <ClInclude Include="7zip\UI\FileManager\ProgressDialog2.h" />
+    <ClInclude Include="7zip\UI\FileManager\ProgressDialog2Res.h" />
+    <ClInclude Include="7zip\UI\FileManager\ProgressDialogRes.h" />
+    <ClInclude Include="7zip\UI\FileManager\PropertyName.h" />
+    <ClInclude Include="7zip\UI\FileManager\PropertyNameRes.h" />
+    <ClInclude Include="7zip\UI\FileManager\RegistryAssociations.h" />
+    <ClInclude Include="7zip\UI\FileManager\RegistryPlugins.h" />
+    <ClInclude Include="7zip\UI\FileManager\RegistryUtils.h" />
+    <ClInclude Include="7zip\UI\FileManager\resource.h" />
+    <ClInclude Include="7zip\UI\FileManager\resourceGui.h" />
+    <ClInclude Include="7zip\UI\FileManager\RootFolder.h" />
+    <ClInclude Include="7zip\UI\FileManager\SettingsPage.h" />
+    <ClInclude Include="7zip\UI\FileManager\SettingsPageRes.h" />
+    <ClInclude Include="7zip\UI\FileManager\SplitDialog.h" />
+    <ClInclude Include="7zip\UI\FileManager\SplitDialogRes.h" />
+    <ClInclude Include="7zip\UI\FileManager\SplitUtils.h" />
+    <ClInclude Include="7zip\UI\FileManager\StdAfx.h" />
+    <ClInclude Include="7zip\UI\FileManager\StringUtils.h" />
+    <ClInclude Include="7zip\UI\FileManager\SysIconUtils.h" />
+    <ClInclude Include="7zip\UI\FileManager\SystemPage.h" />
+    <ClInclude Include="7zip\UI\FileManager\SystemPageRes.h" />
+    <ClInclude Include="7zip\UI\FileManager\TextPairs.h" />
+    <ClInclude Include="7zip\UI\FileManager\UpdateCallback100.h" />
+    <ClInclude Include="7zip\UI\FileManager\ViewSettings.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="7zip\UI\FileManager\AboutDialog.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\BrowseDialog.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\BrowseDialog2.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\ComboDialog.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\CopyDialog.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\EditDialog.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\EditPage.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\EditPage2.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\FoldersPage.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\FoldersPage2.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\LangPage.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\LinkDialog.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\ListViewDialog.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\MemDialog.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\MenuPage.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\MenuPage2.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\MessagesDialog.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\OverwriteDialog.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\PasswordDialog.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\ProgressDialog.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\ProgressDialog2.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\ProgressDialog2a.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\PropertyName.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\resource.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\resourceGui.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\SettingsPage.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\SettingsPage2.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\SplitDialog.rc" />
+    <ResourceCompile Include="7zip\UI\FileManager\SystemPage.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="7zip\UI\FileManager\FM.dsp" />
+    <None Include="7zip\UI\FileManager\FM.dsw" />
+    <None Include="7zip\UI\FileManager\FM.mak" />
+    <None Include="7zip\UI\FileManager\makefile" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

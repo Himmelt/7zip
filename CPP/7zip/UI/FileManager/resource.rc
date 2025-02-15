@@ -254,6 +254,7 @@ BEGIN
   IDS_BUTTON_MOVE    "Move"
   IDS_BUTTON_DELETE  "Delete"
   IDS_BUTTON_INFO    "Info"
+  IDS_AUTOEXTRACT    "AutoExtract"
 
   IDS_SPLITTING            "Splitting..."
   IDS_SPLIT_CONFIRM_TITLE  "Confirm Splitting"

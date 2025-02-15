@@ -1005,7 +1005,7 @@ void CPanel::GetFilePaths(const CRecordVector<UInt32> &operatedIndices, UStringV
 }
 
 
-void CPanel::ExtractArchives()
+void CPanel::ExtractArchives(bool)
 {
   if (!_parentFolders.IsEmpty())
   {

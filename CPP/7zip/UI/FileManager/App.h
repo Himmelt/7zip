@@ -26,6 +26,7 @@ enum
 {
   kMenuCmdID_Toolbar_Add = kMenuCmdID_Toolbar_Start,
   kMenuCmdID_Toolbar_Extract,
+  kMenuCmdID_Toolbar_AutoExtract,
   kMenuCmdID_Toolbar_Test,
   kMenuCmdID_Toolbar_End
 };
@@ -298,7 +299,7 @@ public:
   }
 
   void AddToArchive() { GetFocusedPanel().AddToArchive(); }
-  void ExtractArchives() { GetFocusedPanel().ExtractArchives(); }
+  void ExtractArchives(bool _auto = false) { GetFocusedPanel().ExtractArchives(_auto); }
   void TestArchives() { GetFocusedPanel().TestArchives(); }
 
   void OnNotify(int ctrlID, LPNMHDR pnmh);

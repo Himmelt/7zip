@@ -1,0 +1,610 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="7zip\UI\FileManager\7zFM.exe.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="7zip\UI\FileManager\7zipLogo.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="7zip\UI\FileManager\Add.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="7zip\UI\FileManager\Add2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="7zip\UI\FileManager\Copy.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="7zip\UI\FileManager\Copy2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="7zip\UI\FileManager\Delete.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="7zip\UI\FileManager\Delete2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="7zip\UI\FileManager\Extract.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="7zip\UI\FileManager\Extract2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="7zip\UI\FileManager\FM.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="7zip\UI\FileManager\Info.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="7zip\UI\FileManager\Info2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="7zip\UI\FileManager\Move.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="7zip\UI\FileManager\Move2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="7zip\UI\FileManager\Test.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="7zip\UI\FileManager\Test2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="7zip\UI\FileManager\AboutDialog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\AltStreamsFolder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\App.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\BrowseDialog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\BrowseDialog2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\ClassDefs.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\ComboDialog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\CopyDialog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\EditDialog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\EditPage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\EnumFormatEtc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\ExtractCallback.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\FileFolderPluginOpen.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\FilePlugins.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\FM.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\FoldersPage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\FormatUtils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\FSDrives.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\FSFolder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\FSFolderCopy.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\HelpUtils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\LangPage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\LangUtils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\LinkDialog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\ListViewDialog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\MemDialog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\MenuPage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\MessagesDialog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\MyLoadMenu.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\NetFolder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\OpenCallback.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\OptionsDialog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\OverwriteDialog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\Panel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\PanelCopy.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\PanelCrc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\PanelDrag.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\PanelFolderChange.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\PanelItemOpen.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\PanelItems.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\PanelKey.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\PanelListNotify.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\PanelMenu.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\PanelOperations.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\PanelSelect.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\PanelSort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\PanelSplitFile.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\PasswordDialog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\ProgramLocation.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\ProgressDialog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\ProgressDialog2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\PropertyName.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\RegistryAssociations.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\RegistryPlugins.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\RegistryUtils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\RootFolder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\SettingsPage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\SplitDialog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\SplitUtils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\StdAfx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\StringUtils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\SysIconUtils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\SystemPage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\TextPairs.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\UpdateCallback100.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\VerCtrl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\FileManager\ViewSettings.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="7zip\UI\FileManager\AboutDialog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\AboutDialogRes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\AltStreamsFolder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\App.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\AppState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\BrowseDialog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\BrowseDialog2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\BrowseDialog2Res.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\BrowseDialogRes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\ComboDialog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\ComboDialogRes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\CopyDialog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\CopyDialogRes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\DialogSize.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\EditDialog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\EditDialogRes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\EditPage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\EditPageRes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\EnumFormatEtc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\ExtractCallback.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\FileFolderPluginOpen.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\FilePlugins.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\FoldersPage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\FoldersPageRes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\FormatUtils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\FSDrives.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\FSFolder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\HelpUtils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\IFolder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\LangPage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\LangPageRes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\LangUtils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\LinkDialog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\LinkDialogRes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\ListViewDialog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\ListViewDialogRes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\MemDialog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\MemDialogRes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\MenuPage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\MenuPageRes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\MessagesDialog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\MessagesDialogRes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\MyCom2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\MyLoadMenu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\MyWindowsNew.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\NetFolder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\OpenCallback.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\OverwriteDialog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\OverwriteDialogRes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\Panel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\PasswordDialog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\PasswordDialogRes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\PluginInterface.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\PluginLoader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\ProgramLocation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\ProgressDialog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\ProgressDialog2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\ProgressDialog2Res.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\ProgressDialogRes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\PropertyName.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\PropertyNameRes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\RegistryAssociations.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\RegistryPlugins.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\RegistryUtils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\resourceGui.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\RootFolder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\SettingsPage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\SettingsPageRes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\SplitDialog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\SplitDialogRes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\SplitUtils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\StdAfx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\StringUtils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\SysIconUtils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\SystemPage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\SystemPageRes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\TextPairs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\UpdateCallback100.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\FileManager\ViewSettings.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="7zip\UI\FileManager\AboutDialog.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\BrowseDialog.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\BrowseDialog2.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\ComboDialog.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\CopyDialog.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\EditDialog.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\EditPage.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\EditPage2.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\FoldersPage.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\FoldersPage2.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\LangPage.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\LinkDialog.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\ListViewDialog.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\MemDialog.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\MenuPage.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\MenuPage2.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\MessagesDialog.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\OverwriteDialog.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\PasswordDialog.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\ProgressDialog.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\ProgressDialog2.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\ProgressDialog2a.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\PropertyName.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\resource.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\resourceGui.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\SettingsPage.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\SettingsPage2.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\SplitDialog.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\FileManager\SystemPage.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="7zip\UI\FileManager\FM.dsp" />
+    <None Include="7zip\UI\FileManager\FM.dsw" />
+    <None Include="7zip\UI\FileManager\FM.mak" />
+    <None Include="7zip\UI\FileManager\makefile" />
+  </ItemGroup>
+</Project>

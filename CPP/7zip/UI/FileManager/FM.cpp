@@ -883,6 +883,7 @@ static void ExecuteCommand(UINT commandID)
   {
     case kMenuCmdID_Toolbar_Add: g_App.AddToArchive(); break;
     case kMenuCmdID_Toolbar_Extract: g_App.ExtractArchives(); break;
+    case kMenuCmdID_Toolbar_AutoExtract: g_App.ExtractArchives(true); break;
     case kMenuCmdID_Toolbar_Test: g_App.TestArchives(); break;
   }
 }

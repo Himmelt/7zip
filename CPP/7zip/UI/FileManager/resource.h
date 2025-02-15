@@ -185,6 +185,7 @@
 #define IDS_BUTTON_MOVE                 7204
 #define IDS_BUTTON_DELETE               7205
 #define IDS_BUTTON_INFO                 7206
+#define IDS_AUTOEXTRACT                 7207
 
 #define IDS_SPLITTING                   7303
 #define IDS_SPLIT_CONFIRM_TITLE         7304
