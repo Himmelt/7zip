@@ -1005,11 +1005,11 @@ void CPanel::GetFilePaths(const CRecordVector<UInt32> &operatedIndices, UStringV
 }
 
 
-void CPanel::ExtractArchives(bool)
+void CPanel::ExtractArchives(bool _auto)
 {
   if (!_parentFolders.IsEmpty())
   {
-    _panelCallback->OnCopy(false, false);
+    _panelCallback->OnCopy(false, false, _auto);
     return;
   }
   CRecordVector<UInt32> indices;
