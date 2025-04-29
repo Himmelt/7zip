@@ -124,7 +124,8 @@ BEGIN
             g4x2, yOpt + 30, g4xs2, 10
   CONTROL   "Delete files after compression", IDX_COMPRESS_DEL, MY_CHECKBOX,
             g4x2, yOpt + 46, g4xs2, 10
-
+  CONTROL   "Append date and time to filename", IDX_ADD_DATETIME_TO_FILENAME, MY_CHECKBOX,
+            g4x2, yOpt + 62, g4xs2, 10
 
   GROUPBOX  "Encryption", IDG_COMPRESS_ENCRYPTION, g4x, yPsw, g4xs, GROUP_Y_SIZE_ENCRYPT
 

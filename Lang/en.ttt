@@ -380,6 +380,8 @@ Encrypt file &names
 Memory usage for Compressing:
 Memory usage for Decompressing:
 Delete files after compression
+4020
+Append date and time to filename
 4040
 Store symbolic links
 Store hard links
