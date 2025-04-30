@@ -118,14 +118,14 @@ BEGIN
 
   GROUPBOX  "Options", IDG_COMPRESS_OPTIONS, g4x, yOpt, g4xs, GROUP_Y_SIZE
 
-  CONTROL   "Create SF&X archive", IDX_COMPRESS_SFX, MY_CHECKBOX,
-            g4x2, yOpt + 14, g4xs2, 10
-  CONTROL   "Compress shared files", IDX_COMPRESS_SHARED, MY_CHECKBOX,
-            g4x2, yOpt + 30, g4xs2, 10
-  CONTROL   "Delete files after compression", IDX_COMPRESS_DEL, MY_CHECKBOX,
-            g4x2, yOpt + 46, g4xs2, 10
   CONTROL   "Append date and time to filename", IDX_ADD_DATETIME_TO_FILENAME, MY_CHECKBOX,
-            g4x2, yOpt + 62, g4xs2, 10
+            g4x2, yOpt + 12, g4xs2, 10
+  CONTROL   "Create SF&X archive", IDX_COMPRESS_SFX, MY_CHECKBOX,
+            g4x2, yOpt + 25, g4xs2, 10
+  CONTROL   "Compress shared files", IDX_COMPRESS_SHARED, MY_CHECKBOX,
+            g4x2, yOpt + 38, g4xs2, 10
+  CONTROL   "Delete files after compression", IDX_COMPRESS_DEL, MY_CHECKBOX,
+            g4x2, yOpt + 50, g4xs2, 10
 
   GROUPBOX  "Encryption", IDG_COMPRESS_ENCRYPTION, g4x, yPsw, g4xs, GROUP_Y_SIZE_ENCRYPT
 
