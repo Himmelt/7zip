@@ -353,7 +353,9 @@ public:
 
   void OnButtonSetArchive();
   bool IsSFX();
+  bool IsAddDatetime();
   void OnButtonSFX();
+  void OnButtonAddDatetime();
 
   virtual bool OnInit() Z7_override;
   virtual bool OnMessage(UINT message, WPARAM wParam, LPARAM lParam) Z7_override;

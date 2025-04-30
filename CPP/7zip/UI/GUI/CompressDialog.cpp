@@ -606,6 +606,13 @@ bool CCompressDialog::OnButtonClicked(unsigned buttonID, HWND buttonHWND)
       SetMemoryUsage();
       return true;
     }
+    case IDX_ADD_DATETIME_TO_FILENAME:
+    {
+      SetMethod(GetMethodID());
+      OnButtonAddDatetime();
+      SetMemoryUsage();
+      return true;
+    }
     case IDX_PASSWORD_SHOW:
     {
       UpdatePasswordControl();
@@ -765,6 +772,12 @@ bool CCompressDialog::IsSFX()
       && IsButtonCheckedBool(IDX_COMPRESS_SFX);
 }
 
+bool CCompressDialog::IsAddDatetime()
+{
+  return IsWindowEnabled(GetItem(IDX_ADD_DATETIME_TO_FILENAME))
+      && IsButtonCheckedBool(IDX_ADD_DATETIME_TO_FILENAME);
+}
+
 static int GetExtDotPos(const UString &s)
 {
   const int dotPos = s.ReverseFind_Dot();
@@ -802,6 +815,31 @@ void CCompressDialog::OnButtonSFX()
   // CheckVolumeEnable();
 }
 
+void CCompressDialog::OnButtonAddDatetime(){
+  UString fileName;
+  m_ArchivePath.GetText(fileName);
+  const int dotPos = GetExtDotPos(fileName);
+  if (IsAddDatetime())
+  {
+    if (dotPos >= 0)
+      fileName.DeleteFrom(dotPos);
+    fileName += kExeExt;
+    m_ArchivePath.SetText(fileName);
+  }
+  else
+  {
+    if (dotPos >= 0)
+    {
+      const UString ext = fileName.Ptr(dotPos);
+      if (ext.IsEqualTo_Ascii_NoCase(kExeExt))
+      {
+        fileName.DeleteFrom(dotPos);
+        m_ArchivePath.SetText(fileName);
+      }
+    }
+    SetArchiveName2(false); // it's for OnInit
+  }
+}
 
 bool CCompressDialog::GetFinalPath_Smart(UString &resPath) const
 {
