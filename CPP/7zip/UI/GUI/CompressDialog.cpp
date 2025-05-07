@@ -35,6 +35,7 @@ extern bool g_IsNT;
 #include "CompressDialogRes.h"
 #include "ExtractRes.h"
 #include "resource2.h"
+#include <ctime>
 
 // #define PRINT_PARAMS
 
@@ -815,30 +816,76 @@ void CCompressDialog::OnButtonSFX()
   // CheckVolumeEnable();
 }
 
-void CCompressDialog::OnButtonAddDatetime(){
-  UString fileName;
-  m_ArchivePath.GetText(fileName);
-  const int dotPos = GetExtDotPos(fileName);
-  if (IsAddDatetime())
-  {
-    if (dotPos >= 0)
-      fileName.DeleteFrom(dotPos);
-    fileName += kExeExt;
-    m_ArchivePath.SetText(fileName);
-  }
-  else
-  {
-    if (dotPos >= 0)
+inline bool IsDigit(wchar_t c)
+{
+  return c >= L'0' && c <= L'9';
+}
+
+void CCompressDialog::OnButtonAddDatetime()
+{
+    UString fileName;
+    m_ArchivePath.GetText(fileName);
+    int dotPos = GetExtDotPos(fileName);
+
+    if (IsAddDatetime())
     {
-      const UString ext = fileName.Ptr(dotPos);
-      if (ext.IsEqualTo_Ascii_NoCase(kExeExt))
-      {
-        fileName.DeleteFrom(dotPos);
-        m_ArchivePath.SetText(fileName);
-      }
+        std::time_t t = std::time(nullptr);
+        std::tm lt;
+        localtime_s(&lt, &t);
+        char buffer[16] = { 0 };
+        std::strftime(buffer, sizeof(buffer), "_%Y%m%d%H%M%S", &lt);
+        UString dt(buffer);
+
+        if (dotPos >= 15)
+        {
+            UString candidate = fileName.Mid(dotPos - 15, 15);
+            bool match = (candidate[0] == '_');
+            for (int i = 1; i < 15 && match; i++)
+            {
+                if (!IsDigit(candidate[i]))
+                    match = false;
+            }
+            if (match)
+            {
+                UString left = fileName.Left(dotPos - 15);
+                UString right = fileName.Mid(dotPos, fileName.Len() - dotPos);
+                fileName = left + right;
+                dotPos = GetExtDotPos(fileName);
+            }
+        }
+
+        if (dotPos >= 0)
+        {
+            UString left = fileName.Left(dotPos);
+            UString right = fileName.Mid(dotPos, fileName.Len() - dotPos);
+            fileName = left + dt + right;
+        }
+        else
+        {
+            fileName += dt;
+        }
     }
-    SetArchiveName2(false); // it's for OnInit
-  }
+    else
+    {
+        if (dotPos >= 15)
+        {
+            UString candidate = fileName.Mid(dotPos - 15, 15);
+            bool match = (candidate[0] == '_');
+            for (int i = 1; i < 15 && match; i++)
+            {
+                if (!IsDigit(candidate[i]))
+                    match = false;
+            }
+            if (match)
+            {
+                UString left = fileName.Left(dotPos - 15);
+                UString right = fileName.Mid(dotPos, fileName.Len() - dotPos);
+                fileName = left + right;
+            }
+        }
+    }
+
+    m_ArchivePath.SetText(fileName);
 }
 
 bool CCompressDialog::GetFinalPath_Smart(UString &resPath) const
