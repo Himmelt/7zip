@@ -1,15 +1,3 @@
-# 7-Zip on GitHub
-7-Zip website: [7-zip.org](https://7-zip.org)
-
-## Build
-`nmake NEW_COMPILER=1 MY_CPU_AMD64=1`
-
-## Build Installer
-`set Z7_64BIT_INSTALLER=1`
-`7z a c:\1\a.7z -xtd -mx -mm=lzma`
-`copy /b c:\1\7zip-setup.exe+c:\1\a.7z c:\1\setup.exe`
-
-```
 cd /d D:\Projects\7zip\CPP\7zip
 nmake NEW_COMPILER=1 MY_CPU_AMD64=1
 
@@ -26,5 +14,3 @@ xcopy D:\Projects\7zip\CPP\7zip\Bundles\Fm\x64\7zFM.exe D:\Projects\7zip\build\a
 7z a D:\Projects\7zip\build\content.7z D:\Projects\7zip\build\appfiles\* -xtd -mx -mm=lzma
 
 copy /b D:\Projects\7zip\C\Util\7zipInstall\x64\7zipInstall.exe+D:\Projects\7zip\build\content.7z D:\Projects\7zip\build\7zip_setup.exe
-
-```
