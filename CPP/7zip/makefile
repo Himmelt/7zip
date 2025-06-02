@@ -6,5 +6,5 @@ all: $(DIRS)
 
 $(DIRS):
 	cd $(@D)
-	$(MAKE) -nologo
+	$(MAKE) /A -nologo
 	cd ..

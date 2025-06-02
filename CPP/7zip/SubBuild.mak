@@ -1,3 +1,3 @@
 	cd $(@D)
-	$(MAKE) -nologo $(TARGETS)
+	$(MAKE) /A -nologo $(TARGETS)
 	cd ..
