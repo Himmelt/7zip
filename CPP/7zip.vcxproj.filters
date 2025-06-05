@@ -269,6 +269,21 @@
     <ClCompile Include="7zip\UI\FileManager\ViewSettings.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="7zip\UI\Explorer\ContextMenu.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\Explorer\DllExportsExplorer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\Explorer\MyMessages.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\Explorer\RegistryContextMenu.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7zip\UI\Explorer\StdAfx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="7zip\UI\FileManager\AboutDialog.h">
@@ -511,6 +526,27 @@
     <ClInclude Include="7zip\UI\FileManager\ViewSettings.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="7zip\UI\Explorer\ContextMenu.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\Explorer\ContextMenuFlags.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\Explorer\MyExplorerCommand.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\Explorer\MyMessages.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\Explorer\RegistryContextMenu.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\Explorer\resource.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7zip\UI\Explorer\StdAfx.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="7zip\UI\FileManager\AboutDialog.rc">
@@ -599,6 +635,12 @@
     </ResourceCompile>
     <ResourceCompile Include="7zip\UI\FileManager\SystemPage.rc">
       <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\Explorer\resource.rc">
+      <Filter>源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="7zip\UI\Explorer\resource2.rc">
+      <Filter>源文件</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>

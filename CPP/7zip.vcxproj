@@ -148,6 +148,11 @@
     <Image Include="7zip\UI\FileManager\Test2.bmp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="7zip\UI\Explorer\ContextMenu.cpp" />
+    <ClCompile Include="7zip\UI\Explorer\DllExportsExplorer.cpp" />
+    <ClCompile Include="7zip\UI\Explorer\MyMessages.cpp" />
+    <ClCompile Include="7zip\UI\Explorer\RegistryContextMenu.cpp" />
+    <ClCompile Include="7zip\UI\Explorer\StdAfx.cpp" />
     <ClCompile Include="7zip\UI\FileManager\AboutDialog.cpp" />
     <ClCompile Include="7zip\UI\FileManager\AltStreamsFolder.cpp" />
     <ClCompile Include="7zip\UI\FileManager\App.cpp" />
@@ -217,6 +222,13 @@
     <ClCompile Include="7zip\UI\FileManager\ViewSettings.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="7zip\UI\Explorer\ContextMenu.h" />
+    <ClInclude Include="7zip\UI\Explorer\ContextMenuFlags.h" />
+    <ClInclude Include="7zip\UI\Explorer\MyExplorerCommand.h" />
+    <ClInclude Include="7zip\UI\Explorer\MyMessages.h" />
+    <ClInclude Include="7zip\UI\Explorer\RegistryContextMenu.h" />
+    <ClInclude Include="7zip\UI\Explorer\resource.h" />
+    <ClInclude Include="7zip\UI\Explorer\StdAfx.h" />
     <ClInclude Include="7zip\UI\FileManager\AboutDialog.h" />
     <ClInclude Include="7zip\UI\FileManager\AboutDialogRes.h" />
     <ClInclude Include="7zip\UI\FileManager\AltStreamsFolder.h" />
@@ -299,6 +311,8 @@
     <ClInclude Include="7zip\UI\FileManager\ViewSettings.h" />
   </ItemGroup>
   <ItemGroup>
+    <ResourceCompile Include="7zip\UI\Explorer\resource.rc" />
+    <ResourceCompile Include="7zip\UI\Explorer\resource2.rc" />
     <ResourceCompile Include="7zip\UI\FileManager\AboutDialog.rc" />
     <ResourceCompile Include="7zip\UI\FileManager\BrowseDialog.rc" />
     <ResourceCompile Include="7zip\UI\FileManager\BrowseDialog2.rc" />

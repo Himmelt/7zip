@@ -32,7 +32,7 @@
 #include "MyMessages.h"
 
 #include "resource.h"
-
+#include <ctime>
 
 // #define SHOW_DEBUG_CTX_MENU
 
@@ -280,6 +280,7 @@ static const CContextMenuCommand g_Commands[] =
   CMD_REC( kCompressTo7z,       "CompressTo7z",       IDS_CONTEXT_COMPRESS_TO),
   CMD_REC( kCompressTo7zEmail,  "CompressTo7zEmail",  IDS_CONTEXT_COMPRESS_TO_EMAIL),
   CMD_REC( kCompressToZip,      "CompressToZip",      IDS_CONTEXT_COMPRESS_TO),
+  CMD_REC( kCompressToZipWithDate,      "CompressToZip",      IDS_CONTEXT_COMPRESS_TO),
   CMD_REC( kCompressToZipEmail, "CompressToZipEmail", IDS_CONTEXT_COMPRESS_TO_EMAIL)
 };
 
@@ -912,6 +913,16 @@ Z7_COMWF_B CZipContextMenu::QueryContextMenu(HMENU hMenu, UINT indexMenu,
     UString arcName_zip_Show = arcName_Show;
     arcName_zip_Show += ".zip";
 
+    std::time_t t = std::time(nullptr);
+    std::tm lt;
+    localtime_s(&lt, &t);
+    char buffer[16] = { 0 };
+    std::strftime(buffer, sizeof(buffer), "_%Y%m%d%H%M%S", &lt);
+    UString dt(buffer);
+    UString arcName_dt_zip = arcName + dt;
+    arcName_dt_zip += ".zip";
+    UString arcName_dt_zip_Show = arcName_Show + dt;
+    arcName_dt_zip_Show += ".zip";
 
     // Compress
     if ((contextMenuFlags & NContextMenuFlags::kCompress) != 0)
@@ -986,6 +997,20 @@ Z7_COMWF_B CZipContextMenu::QueryContextMenu(HMENU hMenu, UINT indexMenu,
       MyFormatNew_ReducedName(s, arcName_zip_Show);
       Set_UserString_in_LastCommand(s);
       MyInsertMenu(popupMenu, subIndex++, currentCommandID++, s, bitmap);
+
+      // CompressToZip With Datetime
+      CCommandMapItem cmi2;
+      UString s2;
+      if (_dropMode)
+        cmi2.Folder = _dropPath;
+      else
+        cmi2.Folder = fs2us(folderPrefix);
+      cmi2.ArcName = arcName_dt_zip;
+      cmi2.ArcType = "zip";
+      AddCommand(kCompressToZipWithDate, s2, cmi2);
+      MyFormatNew_ReducedName(s2, arcName_dt_zip_Show);
+      Set_UserString_in_LastCommand(s2);
+      MyInsertMenu(popupMenu, subIndex++, currentCommandID++, s2, bitmap);
     }
 
     #ifdef EMAIL_SUPPORT
@@ -1292,6 +1317,12 @@ HRESULT CZipContextMenu::InvokeCommandCommon(const CCommandMapItem &cmi)
       case kTest:
       {
         TestArchives(_fileNames);
+        break;
+      }
+      case kCompressToZipWithDate:
+      {
+        UString arcName = cmi.ArcName;
+        CompressFiles(cmi.Folder, arcName, cmi.ArcType, false, _fileNames, false, false, false);
         break;
       }
       case kCompress:

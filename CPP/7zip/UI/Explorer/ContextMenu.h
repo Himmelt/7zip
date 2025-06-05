@@ -84,6 +84,7 @@ public:
     kCompressTo7z,
     kCompressTo7zEmail,
     kCompressToZip,
+    kCompressToZipWithDate,
     kCompressToZipEmail,
     kHash_CRC32,
     kHash_CRC64,
