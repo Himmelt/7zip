@@ -299,6 +299,8 @@ public:
 
   void AddToArchive() { GetFocusedPanel().AddToArchive(); }
   void ExtractArchives() { GetFocusedPanel().ExtractArchives(); }
+  // CUSTOM: one-click extract; body is defined in Custom/CustomApp.h
+  void AutoExtract();
   void TestArchives() { GetFocusedPanel().TestArchives(); }
 
   void OnNotify(int ctrlID, LPNMHDR pnmh);
@@ -310,5 +312,8 @@ public:
 
   void MoveSubWindows();
 };
+
+// CUSTOM: inline bodies of the added methods live in our own file.
+#include "../../Custom/CustomApp.h"
 
 #endif
