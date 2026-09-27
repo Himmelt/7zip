@@ -36,6 +36,9 @@ extern bool g_IsNT;
 #include "ExtractRes.h"
 #include "resource2.h"
 
+// CUSTOM: append date/time to archive filename
+#include "../../Custom/CustomDateTime.h"
+
 // #define PRINT_PARAMS
 
 #ifdef Z7_LANG
@@ -58,6 +61,7 @@ static const UInt32 kLangIDs[] =
   IDB_COMPRESS_OPTIONS, // IDS_OPTIONS
 
   IDG_COMPRESS_OPTIONS,
+  Z7_CUSTOM_IDX_DATETIME,
   IDX_COMPRESS_SFX,
   IDX_COMPRESS_SHARED,
   IDX_COMPRESS_DEL,
@@ -590,6 +594,12 @@ bool CCompressDialog::OnButtonClicked(unsigned buttonID, HWND buttonHWND)
     case IDB_COMPRESS_SET_ARCHIVE:
     {
       OnButtonSetArchive();
+      return true;
+    }
+    // CUSTOM: toggle "_YYYYMMDDHHMMSS" in archive filename
+    case Z7_CUSTOM_IDX_DATETIME:
+    {
+      Z7Custom::ToggleArchiveDatetime(*this, m_ArchivePath);
       return true;
     }
     case IDX_COMPRESS_SFX:
