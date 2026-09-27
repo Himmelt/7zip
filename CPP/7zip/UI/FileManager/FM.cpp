@@ -33,6 +33,8 @@
 #include "resource.h"
 
 #include "App.h"
+// CUSTOM: AutoExtract toolbar command id
+#include "../../Custom/CustomIDs.h"
 #include "FormatUtils.h"
 #include "LangUtils.h"
 #include "MyLoadMenu.h"
@@ -883,6 +885,8 @@ static void ExecuteCommand(UINT commandID)
   {
     case kMenuCmdID_Toolbar_Add: g_App.AddToArchive(); break;
     case kMenuCmdID_Toolbar_Extract: g_App.ExtractArchives(); break;
+    // CUSTOM: one-click extract
+    case Z7_CUSTOM_TOOLBAR_AUTO_EXTRACT: g_App.AutoExtract(); break;
     case kMenuCmdID_Toolbar_Test: g_App.TestArchives(); break;
   }
 }
@@ -897,7 +901,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
       unsigned wmEvent = HIWORD(wParam);
       if ((HWND) lParam != NULL && wmEvent != 0)
         break;
-      if (wmId >= kMenuCmdID_Toolbar_Start && wmId < kMenuCmdID_Toolbar_End)
+      // CUSTOM: extend range check to the AutoExtract button id
+      if (wmId >= kMenuCmdID_Toolbar_Start && wmId < kMenuCmdID_Toolbar_End
+          || wmId == Z7_CUSTOM_TOOLBAR_AUTO_EXTRACT)
       {
         ExecuteCommand(wmId);
         return 0;

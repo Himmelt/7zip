@@ -1,0 +1,107 @@
+name: Build and Release
+
+on:
+  push:
+    branches: [main]
+    tags:
+      - 'v*'      # e.g. v25.01
+      - '[0-9]*'  # e.g. 25.01, 26.00
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Locate vcvars64.bat
+        shell: pwsh
+        run: |
+          $vswhere = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe"
+          $vs = & $vswhere -latest -products * -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath
+          if (-not $vs) { throw "vswhere found no VS installation with VC tools" }
+          "VCVARS64=$vs\VC\Auxiliary\Build\vcvars64.bat" >> $env:GITHUB_ENV
+
+      - name: Build binaries
+        shell: cmd
+        run: |
+          call "%VCVARS64%"
+          cd /d "%GITHUB_WORKSPACE%\CPP\7zip"
+          nmake /A NEW_COMPILER=1 MY_CPU_AMD64=1
+          if errorlevel 1 exit /b 1
+          cd /d "%GITHUB_WORKSPACE%\C\Util\7zipInstall"
+          nmake /A NEW_COMPILER=1 MY_CPU_AMD64=1 Z7_64BIT_INSTALLER=1
+          if errorlevel 1 exit /b 1
+          cd /d "%GITHUB_WORKSPACE%\C\Util\7zipUninstall"
+          nmake /A NEW_COMPILER=1 MY_CPU_AMD64=1 Z7_64BIT_INSTALLER=1
+          if errorlevel 1 exit /b 1
+
+      - name: Stage app files
+        shell: cmd
+        run: |
+          cd /d "%GITHUB_WORKSPACE%"
+          robocopy res build\appfiles /e
+          if %ERRORLEVEL% GEQ 8 exit /b 1
+          copy /y CPP\7zip\Bundles\Fm\x64\7zFM.exe build\appfiles\7zFM.exe
+          if errorlevel 1 exit /b 1
+          copy /y CPP\7zip\UI\GUI\x64\7zG.exe build\appfiles\7zG.exe
+          if errorlevel 1 exit /b 1
+          copy /y CPP\7zip\Bundles\Format7zF\x64\7z.dll build\appfiles\7z.dll
+          if errorlevel 1 exit /b 1
+          copy /y CPP\7zip\UI\Console\x64\7z.exe build\appfiles\7z.exe
+          if errorlevel 1 exit /b 1
+          copy /y CPP\7zip\UI\Explorer\x64\7-zip.dll build\appfiles\7-zip.dll
+          if errorlevel 1 exit /b 1
+          copy /y CPP\7zip\Bundles\SFXWin\x64\7z.sfx build\appfiles\7z.sfx
+          if errorlevel 1 exit /b 1
+          copy /y CPP\7zip\Bundles\SFXCon\x64\7zCon.sfx build\appfiles\7zCon.sfx
+          if errorlevel 1 exit /b 1
+          copy /y C\Util\7zipUninstall\x64\7zipUninstall.exe build\appfiles\Uninstall.exe
+          if errorlevel 1 exit /b 1
+
+      - name: Package installer
+        shell: cmd
+        run: |
+          cd /d "%GITHUB_WORKSPACE%"
+          7z a build\content.7z "build\appfiles\*" -xtd -mx -mm=lzma
+          if errorlevel 1 exit /b 1
+          copy /b C\Util\7zipInstall\x64\7zipInstall.exe+build\content.7z build\7zip_setup.exe
+          if errorlevel 1 exit /b 1
+          dir build\7zip_setup.exe
+
+      - name: Upload installer artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: 7zip-setup
+          path: build/7zip_setup.exe
+          retention-days: 7
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    if: startsWith(github.ref, 'refs/tags/')
+    steps:
+      # gh release create resolves the tag locally, so a git repo is required
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Download installer artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: 7zip-setup
+          path: artifacts
+
+      - name: Publish release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            artifacts/7zip_setup.exe \
+            --title "$GITHUB_REF_NAME" \
+            --generate-notes

@@ -1,6 +1,8 @@
 #include "../../MyVersionInfo.rc"
 #include "../../GuiCommon.rc"
 #include "resource.h"
+// CUSTOM: AutoExtract string id
+#include "../../Custom/CustomIDs.h"
 
 MY_VERSION_INFO_APP("7-Zip File Manager", "7zFM")
 
@@ -254,6 +256,7 @@ BEGIN
   IDS_BUTTON_MOVE    "Move"
   IDS_BUTTON_DELETE  "Delete"
   IDS_BUTTON_INFO    "Info"
+  Z7_CUSTOM_IDS_AUTOEXTRACT  "AutoExtract"
 
   IDS_SPLITTING            "Splitting..."
   IDS_SPLIT_CONFIRM_TITLE  "Confirm Splitting"

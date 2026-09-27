@@ -33,6 +33,9 @@
 
 #include "resource.h"
 
+// CUSTOM: timestamped zip compression
+#include "../../Custom/CustomContextMenu.h"
+
 
 // #define SHOW_DEBUG_CTX_MENU
 
@@ -986,6 +989,17 @@ Z7_COMWF_B CZipContextMenu::QueryContextMenu(HMENU hMenu, UINT indexMenu,
       MyFormatNew_ReducedName(s, arcName_zip_Show);
       Set_UserString_in_LastCommand(s);
       MyInsertMenu(popupMenu, subIndex++, currentCommandID++, s, bitmap);
+
+      // CUSTOM: same compression with a timestamped zip name. The map item
+      // is registered directly, so no row is needed in g_Commands.
+      CCommandMapItem cmi2 = cmi;
+      cmi2.CommandInternalID = (enum_CommandInternalID)Z7_CUSTOM_CMD_ZIP_WITH_DATE;
+      cmi2.ArcName = Z7Custom::MakeTimestampedName(arcName, L".zip");
+      _commandMap.Add(cmi2);
+      UString s2;
+      MyFormatNew_ReducedName(s2, Z7Custom::MakeTimestampedName(arcName_Show, L".zip"));
+      Set_UserString_in_LastCommand(s2);
+      MyInsertMenu(popupMenu, subIndex++, currentCommandID++, s2, bitmap);
     }
 
     #ifdef EMAIL_SUPPORT
@@ -1259,6 +1273,12 @@ HRESULT CZipContextMenu::InvokeCommandCommon(const CCommandMapItem &cmi)
 
   try
   {
+    // CUSTOM: timestamped zip command; id is outside the upstream enum,
+    // so intercept it before the switch instead of adding a case label.
+    if (cmdID == (enum_CommandInternalID)Z7_CUSTOM_CMD_ZIP_WITH_DATE)
+      return Z7Custom::CompressZipWithDatetime(
+          cmi.Folder, cmi.ArcName, cmi.ArcType, _fileNames);
+
     switch (cmdID)
     {
       case kOpen:

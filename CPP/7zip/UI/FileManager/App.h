@@ -43,6 +43,8 @@ public:
   virtual void OnTab() Z7_override;
   virtual void SetFocusToPath(unsigned index) Z7_override;
   virtual void OnCopy(bool move, bool copyToSame) Z7_override;
+  // CUSTOM: one-click extract callback, new method instead of a signature change
+  virtual void OnAutoExtract() Z7_override;
   virtual void OnSetSameFolder() Z7_override;
   virtual void OnSetSubFolder() Z7_override;
   virtual void PanelWasFocused() Z7_override;
@@ -102,6 +104,8 @@ public:
   void DragEnd();
   
   void OnCopy(bool move, bool copyToSame, unsigned srcPanelIndex);
+  // CUSTOM: one-click extract entry point
+  void AutoExtract(unsigned srcPanelIndex);
   void OnSetSameFolder(unsigned srcPanelIndex);
   void OnSetSubFolder(unsigned srcPanelIndex);
 
@@ -299,6 +303,8 @@ public:
 
   void AddToArchive() { GetFocusedPanel().AddToArchive(); }
   void ExtractArchives() { GetFocusedPanel().ExtractArchives(); }
+  // CUSTOM: one-click extract; body is defined in Custom/CustomApp.h
+  void AutoExtract();
   void TestArchives() { GetFocusedPanel().TestArchives(); }
 
   void OnNotify(int ctrlID, LPNMHDR pnmh);
@@ -310,5 +316,8 @@ public:
 
   void MoveSubWindows();
 };
+
+// CUSTOM: inline bodies of the added methods live in our own file.
+#include "../../Custom/CustomApp.h"
 
 #endif

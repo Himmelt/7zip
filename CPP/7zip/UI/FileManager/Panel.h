@@ -72,6 +72,8 @@ DECLARE_INTERFACE(CPanelCallback)
   virtual void OnTab() = 0;
   virtual void SetFocusToPath(unsigned index) = 0;
   virtual void OnCopy(bool move, bool copyToSame) = 0;
+  // CUSTOM: one-click extract, added as a new method so upstream signatures stay untouched
+  virtual void OnAutoExtract() = 0;
   virtual void OnSetSameFolder() = 0;
   virtual void OnSetSubFolder() = 0;
   virtual void PanelWasFocused() = 0;
@@ -922,6 +924,8 @@ public:
   int FindDir_InOperatedList(const CRecordVector<UInt32> &indices) const;
   void GetFilePaths(const CRecordVector<UInt32> &indices, UStringVector &paths) const;
   void ExtractArchives();
+  // CUSTOM: one-click extract into an archive-named folder
+  void AutoExtract();
   void TestArchives();
 
   void Get_ZoneId_Stream_from_ParentFolders(CByteBuffer &buf);
