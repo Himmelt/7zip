@@ -1,0 +1,58 @@
+name: Build and Release
+
+on:
+  push:
+    branches: [main]
+    tags:
+      - 'v*'      # e.g. v25.01
+      - '[0-9]*'  # e.g. 25.01, 26.00
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      # build.bat locates VS via vswhere, builds all targets and
+      # packages build\7zip_setup.exe - identical to a local run.
+      - name: Build and package
+        shell: cmd
+        run: build.bat
+
+      - name: Upload installer artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: 7zip-setup
+          path: build/7zip_setup.exe
+          retention-days: 7
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    if: startsWith(github.ref, 'refs/tags/')
+    steps:
+      # gh release create resolves the tag locally, so a git repo is required
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Download installer artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: 7zip-setup
+          path: artifacts
+
+      - name: Publish release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            artifacts/7zip_setup.exe \
+            --title "$GITHUB_REF_NAME" \
+            --generate-notes

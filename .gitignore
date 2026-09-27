@@ -1,0 +1,25 @@
+# build output
+build/
+x64/
+o/
+
+# IDE / tooling
+.vs/
+*.vcxproj.user
+
+# AI tools
+.workbuddy/
+.claude/
+.cursor/
+.cursorrules
+.windsurf/
+.codeium/
+.copilot/
+.continue/
+.aider*
+.clinerules/
+.trae/
+.gemini/
+.qoder/
+.qwen/
+.lingma/
