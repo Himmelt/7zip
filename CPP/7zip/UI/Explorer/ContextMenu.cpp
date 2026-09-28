@@ -997,6 +997,7 @@ Z7_COMWF_B CZipContextMenu::QueryContextMenu(HMENU hMenu, UINT indexMenu,
       cmi2.ArcName = Z7Custom::MakeTimestampedName(arcName, L".zip");
       _commandMap.Add(cmi2);
       UString s2;
+      LangString(IDS_CONTEXT_COMPRESS_TO, s2);
       MyFormatNew_ReducedName(s2, Z7Custom::MakeTimestampedName(arcName_Show, L".zip"));
       Set_UserString_in_LastCommand(s2);
       MyInsertMenu(popupMenu, subIndex++, currentCommandID++, s2, bitmap);
